@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Tip</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">TravelTip</div>
+        <div class="location-search">
+            <input type="text" name="location-searched" id="location-searched">
+            <button>Go</button>
+            <button>My Location</button>
+        </div>
+    </header>
+    <main>
+        <aside class="location-diaplay-container">
+            <div class="display-location">Location: <span></span></div>
+            <button>Copy Location</button>
+        </aside>
+        <div class="table-map-container">
+            <section class="locations-list-container">
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Info</th>
+                        <th>Weather</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="map-container">
+                <div id="map"></div>
+            </section>
+
+            <section class="weather-container"></section>
+        </div>
+    </main>
+
+    <script src="./scripts/service.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
