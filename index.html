@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Travel Tip</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 </head>
@@ -13,8 +14,8 @@
         <div class="logo">TravelTip</div>
         <div class="location-search">
             <input type="text" name="location-searched" id="location-searched">
-            <button>Go</button>
-            <button>My Location</button>
+            <button onclick="onUserLocationSearch()">Go</button>
+            <button onclick="onAddCurrLocation()">My Location</button>
         </div>
     </header>
     <main>
@@ -31,9 +32,7 @@
                         <th>Weather</th>
                         <th>Actions</th>
                     </thead>
-                    <tbody>
-
-                    </tbody>
+                    <tbody class="place-list"></tbody>
                 </table>
             </section>
 
@@ -45,7 +44,16 @@
         </div>
     </main>
 
-    <script src="./scripts/service.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVpwpbYfyZdyiQ6VvNwpEFKlelM35SYIg&callback=onMapReady"></script>
+
+    <script src="./lib/axios.js"></script>
+    <script src="./scripts/model/Location.js"></script>
+    <script src="./scripts/components/LocationPreview.js"></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/mapController.js"></script>
+    <script src="./scripts/mapService.js"></script>
+    <!-- <script src="./scripts/service.js"></script> -->
     <script src="./scripts/main.js"></script>
 </body>
 </html>

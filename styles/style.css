@@ -16,7 +16,7 @@ header {
     align-items: center;
     background-color: rgb(72, 212, 147);
     height: 120px;
-    padding: 8px 10px;
+    padding: 8px 30px;
 }
 
 .logo {
@@ -35,10 +35,51 @@ input, button {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(162, 230, 198);
-    height: 120px;
-    padding: 8px 10px;
+    height: 80px;
+    padding: 8px 30px;
 }
 
 .table-map-container {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.weather-td {
+    display: flex;
+    flex-direction: column;
+}
+
+ .map-container {
+    width: 50%;
+    position: relative;
+}
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.user-location button {
+    z-index: 9;
+    background: none rgb(255, 255, 255);
+    border: 0px;
+    margin: 10px;
+    padding: 0px;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    overflow: hidden;
+    top: 41px;
+    opacity: 0.6;
+    right: 0px;
+}
+
+section.locations-list-container {
+    width: 50%;
 }
